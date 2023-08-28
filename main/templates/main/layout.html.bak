@@ -1,0 +1,26 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+<title>{%block title%}{%endblock%}</title>
+<link rel="stylesheet" href="{%static 'main/css/main.css'%}">
+</head>
+<body>
+
+﻿
+
+<aside>
+<h3>Навигация</h3>
+<ul>
+<a href="{% url 'home' %}"><li>главная</li></a>
+<a href="{% url 'about' %}"><li>Пpo нac</li></a> 
+<a href="{% url 'contacts' %}"><li>KOHтakты</li></a>
+</ul>
+</aside>
+<main>
+{% block content %}
+{% endblock %}
+</main>
+
+</body>
+</html>

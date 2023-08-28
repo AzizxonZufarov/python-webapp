@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Главная{%endblock%}
+
+{% block content%}
+{% include 'main/test.html' %}
+<h1>{{ title }}</h1>
+<h1>{{ var }}</h1>
+<h1>main index</h1>
+
+{% for el in values %}
+	{% if el == 'hello' %}
+		{% filter upper %}
+			<p>{{el}}</p>
+		{% endfilter %}
+	{% endif %}
+{% endfor %}
+{% for el in obj %}
+		<p>{{el|upper}}</p>
+	{% endfor %}
+{% endblock %}
